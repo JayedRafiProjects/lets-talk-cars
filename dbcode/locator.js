@@ -46,8 +46,9 @@ $(function () {
 							{ "sTitle": "Picture" }, 
 							{ "sTitle": "Style" },
 							{ "sTitle": "Make" },
+							{ "sTitle": "Model" },
 							{ "sTitle": "Year"},
-							{ "sTitle": "Transmission", "bVisible": false },
+							{ "sTitle": "Transmission"},//, "bVisible": false 
 							{ "sTitle": "Engine Displacement" },
 							{ "sTitle": "Engine Cylinders"},
 							{ "sTitle": "Drive Train"},

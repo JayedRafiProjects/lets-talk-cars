@@ -76,10 +76,10 @@ $(function () {
 	make =  '<span id="span-make">Make: </span>' +  
 					'<select id="make">'   +
 						'<option value="All">All</option>' +
-						'<option value="Form">Toyota</option>' + 
-						'<option value="Template">Lexus</option>' + 
-						'<option value="Manual">Audi</option>' +
-						'<option value="Guideline">BMW</option>' + 
+						'<option value="Toyota">Toyota</option>' + 
+						'<option value="LEXUS">LEXUS</option>' + 
+						'<option value="Audi">Audi</option>' +
+						'<option value="BMW">BMW</option>' + 
 					'</select>';				
 	
 	

@@ -62,7 +62,7 @@ $(function () {
 				]
 		});
 	});
-	var make, dd_class, dd_owner;
+	var make, trans, dd_owner;
 	//dd_type
 
 
@@ -84,45 +84,18 @@ $(function () {
 	
 	
 	// type section
-	dd_class =  '<span id="span-class">Filter By Class: </span>' +  
-					'<select id="dd_class">'   +
+	trans =  '<span id="span-trans">Transmission: </span>' +  
+					'<select id="trans">'   +
 						'<option value="All">All</option>' +
-						'<option value="Authority Seeking">Authority Seeking</option>' + 
-						'<option value="Administration - General">Administration - General</option>' + 
-						'<option value="Administration - Financial">Administration - Financial</option>' +
-						'<option value="Technology">Technology</option>' + 
-						'<option value="Human Resources">Human Resources</option>' +
-						'<option value="Safety and Health">Safety & Health</option>' +
+						'<option value="AT">Automatic</option>' + 
+						'<option value="MT">Manual</option>' + 
 					'</select>';
 						
-						
-	// branch section					
-	dd_owner = '<span id="span-owner">Filter By Owner: </span>'+
-					'<select id=dd_owner>'   +
-						'<option value="All">All</option>' +
-						'<option value="Civil Service Commission">Civil Service Commission</option>' +
-						'<option value="Financial Services">Financial Services</option>' + 
-						'<option value="Finance and Shared Services">Finance and Shared Services</option>' + 
-						'<option value="Shared Services and Risk Management">Shared Services and Risk Management</option>' +
-						'<option value="Department">Department</option>' + 
-						'<option value="Fish and Wildlife">Fish and Wildlife</option>' +
-						'<option value="Conservation Officer Service">Conservation Officer Service</option>' +
-						'<option value="Process Improvement and Technology">Process Improvement and Technology</option>' +
-						'<option value="Manitoba Wildfire service">Manitoba Wildfire Service</option>' +
-						'<option value="Forestry and Peatlands">Forestry and Peatlands</option>' +
-						'<option value="Manitoba Geological Survey">Manitoba Geological Survey' +
-						'<option value="Consultation and Reconciliation Unit">Consultation and Reconciliation Unit' +
-						'<option value="Lands and Planning">Lands and Planning</option>' +
-						'<option value="Mining, Oil and Gas">Mining, Oil and Gas</option>' +
-						'<option value="Business Development Services Unit">Business Development Services Unit</option>' +
-						'<option value="NRND">NRND</option>' +
-					'</select>';	
-						
+											
 
 	
 	
-	$(dd_owner).prependTo("#ftmg-container");	
-	$(dd_class).prependTo("#ftmg-container");
+	$(trans).prependTo("#ftmg-container");
 	$(make).prependTo("#ftmg-container");
 
 	
@@ -137,21 +110,14 @@ $(function () {
 	});
 	
 	
-	$("#dd_class").on('change', function () {
+	$("#trans").on('change', function () {
 		if ( this.value == "All"){
-			oTable.columns(3).search( "" ).draw();
-		}else{
-			oTable.columns(3).search( this.value ).draw();
-		}
-	});
-	// filter category
-	$("#dd_owner").on('change', function () {
-		if ( this.value == "All" ){
 			oTable.columns(5).search( "" ).draw();
 		}else{
 			oTable.columns(5).search( this.value ).draw();
 		}
 	});
+
    
 		
 }); //end main

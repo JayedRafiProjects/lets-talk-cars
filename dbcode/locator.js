@@ -62,8 +62,8 @@ $(function () {
 				]
 		});
 	});
-	var dd_dtype, dd_class, dd_owner;
-	
+	var make, dd_class, dd_owner;
+	//dd_type
 
 
 	
@@ -73,13 +73,13 @@ $(function () {
 	
 	
 	// document type section					
-	dd_dtype =  '<span id="span-dtype">Filter By Document Type: </span>' +  
-					'<select id="dd_dtype">'   +
+	make =  '<span id="span-make">Make: </span>' +  
+					'<select id="make">'   +
 						'<option value="All">All</option>' +
-						'<option value="Form">Form</option>' + 
-						'<option value="Template">Template</option>' + 
-						'<option value="Manual">Manual</option>' +
-						'<option value="Guideline">Guideline</option>' + 
+						'<option value="Form">Toyota</option>' + 
+						'<option value="Template">Lexus</option>' + 
+						'<option value="Manual">Audi</option>' +
+						'<option value="Guideline">BMW</option>' + 
 					'</select>';				
 	
 	
@@ -123,16 +123,16 @@ $(function () {
 	
 	$(dd_owner).prependTo("#ftmg-container");	
 	$(dd_class).prependTo("#ftmg-container");
-	$(dd_dtype).prependTo("#ftmg-container");
+	$(make).prependTo("#ftmg-container");
 
 	
 	
 	// filter category
-	$("#dd_dtype").on('change', function () {
+	$("#make").on('change', function () {
 		if ( this.value == "All" ){
-			oTable.columns(1).search( "" ).draw();
+			oTable.columns(2).search( "" ).draw();
 		}else{
-			oTable.columns(1).search( this.value ).draw();
+			oTable.columns(2).search( this.value ).draw();
 		}
 	});
 	
